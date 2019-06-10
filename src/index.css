@@ -1,0 +1,248 @@
+body {
+  font-family: "Helvetica", sans-serif;
+  font-size: 14px;
+  background-color: #F8F8F8;
+}
+
+.form {
+  max-width: 450px;
+  margin: 200px auto 0 auto;
+  padding-bottom: 20px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+}
+
+.form__header {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+
+  background-color: #F8F8F8;
+}
+
+.form__video {
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 10px;
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.form__video:hover,
+.form__video:focus,
+.form__video:active {
+  text-decoration: underline;
+}
+
+.form__container {
+  padding: 0 20px;
+}
+
+.form__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  margin-bottom: 15px;
+
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form__input-text {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 8px;
+}
+
+.form__input-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 48.5%;
+}
+
+.form__input {
+  display: block;
+  width: 100% !important;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.form__input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form__input-container--phone {
+  flex-basis: 100%;
+}
+
+.form__phone-btn {
+  background-color: #ffffff !important;
+}
+
+.form__input {
+  font-size: 18px !important;
+}
+
+.form__promo-btn {
+  display: block;
+  margin-bottom: 15px;
+  padding: 0;
+
+  color: #2974d1;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.form__promo-btn:hover,
+.form__promo-btn:focus,
+.form__promo-btn:active {
+  text-decoration: underline;
+}
+
+.form__input--promo {
+  max-width: 150px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+  font-size: 28px;
+  text-align: center;
+}
+
+.form__agreement-container {
+  display: block;
+  position: relative;
+  
+  width: 73%;
+  margin: 0 auto;
+  margin-bottom: 13px;
+  padding-left: 30px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  cursor: pointer;
+}
+
+.form__agreement-container input {
+  position: absolute;
+  z-index: -1;
+
+  opacity: 0;
+}
+
+.form__indicator {
+  position: absolute;
+  top: 2px;
+
+  left: 0;
+  height: 20px;
+  width: 20px;
+
+  background: #e6e6e6;
+  border-radius: 5px;
+}
+
+.form__agreement-container:hover input ~ .form__indicator,
+.form__agreement-container input:focus ~ .form__indicator {
+  background: #cccccc;
+}
+
+.form__agreement-container input:checked ~ .form__indicator {
+  background: #3EB563;
+}
+
+.form__agreement-container input:disabled ~ .form__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.form__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.form__agreement-container input:checked ~ .form__indicator:after {
+  display: block;
+}
+
+.form__agreement-container .form__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.form__agreement-container input:disabled ~ .form__indicator:after {
+  border-color: #7b7b7b;
+}
+
+.form__agreement-link {
+  text-decoration: none;
+}
+
+.form__agreement-link:hover,
+.form__agreement-link:focus,
+.form__agreement-link:active {
+  text-decoration: underline;
+}
+
+.form__reg-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.form__submit-btn {
+  padding: 6px 15px;
+
+  color: #ffffff;
+
+  background-color: #3579B6;
+  border: 1px solid #4d789d;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.form__submit-btn:hover {
+  background-color: #35b671;
+  border-color: #57b635;
+}
+
+.form__submit-btn:focus,
+.form__submit-btn:active {
+  background-color: #35b671;
+  border-color: #57b635;
+  opacity: 0.6;
+}
+
+.form__submit-btn:disabled {
+  opacity: 0.2;
+}
